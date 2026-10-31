@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise 🎂</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #75435f;
+    background: linear-gradient(135deg, #ffe1ef, #d8fffb);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #e56fa7;
+    font-size: clamp(28px, 6vw, 43px);
+}
+
+.cake {
+    font-size: 110px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+button, a {
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+    padding: 13px 22px;
+    margin: 10px;
+    background: #ed8fbd;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    background: #65cfc7;
+}
+
+#message {
+    display: none;
+    max-width: 550px;
+    padding: 20px;
+    margin: 20px auto;
+    background: #ffffffc9;
+    border-radius: 20px;
+    line-height: 1.8;
+}
+
+#balloons {
+    font-size: 28px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎀 Happy Birthday! 🎀</h1>
+<p>Your special surprise is here! 🩷🩵</p>
+
+<div class="cake" id="cake">🎂</div>
+
+<button onclick="blowCandles()">Blow the Candles 🕯️</button>
+
+<div id="message">
+    <h2>🎉 Surprise! 🎉</h2>
+    <p>
+        Happy Birthday! 🩷<br>
+        I hope your day is full of happiness, love and beautiful memories.
+        Thank you for being part of my life.
+        we all love you so much! 🩵
+        sarasirrrrrrrr💗
+    </p>
+    <div id="balloons">🎈 🎈 🎈 🎈 🎈</div>
+</div>
+
+<a href="page6.html">← Back to Our Memories 📸</a>
+<a href="index.html">← Back to the Beginning 🩷</a>
+<script>
+function blowCandles() {
+    document.getElementById("cake").textContent = "🍰";
+    document.getElementById("message").style.display = "block";
+    document.getElementById("balloons").textContent =
+        "🎈 💗 🎉 🎈 ✨ 🎈 🩵 🎉";
+}
+</script>
+
+</body>
+</html>

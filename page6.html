@@ -1,107 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Birthday Surprise 🎂</title>
-
+<title>Our Birthday Surprise 🎂</title>
 <style>
+* { box-sizing: border-box; }
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: "Trebuchet MS", sans-serif;
-    color: #75435f;
-    background: linear-gradient(135deg, #ffe1ef, #d8fffb);
-    padding: 20px;
-    box-sizing: border-box;
+    margin: 0; min-height: 100vh; font-family: "Trebuchet MS", sans-serif;
+    text-align: center; color: #75435f;
+    background: linear-gradient(135deg, #ffe1ef, #d8fffb); overflow-x: hidden;
 }
-
-h1 {
-    color: #e56fa7;
-    font-size: clamp(28px, 6vw, 43px);
+header { padding: 30px 15px 10px; }
+h1 { color: #e56fa7; font-size: clamp(28px, 6vw, 43px); margin-bottom: 10px; }
+.subtitle { font-size: 17px; }
+.big-photo {
+    width: min(82%, 360px); height: 300px; object-fit: cover;
+    border: 10px solid white; border-bottom-width: 35px; border-radius: 5px;
+    box-shadow: 0 8px 25px #ba83a755; transform: rotate(-2deg);
+    animation: appear 0.8s ease;
 }
-
-.cake {
-    font-size: 110px;
-    animation: bounce 1.5s infinite;
+@keyframes appear {
+    from { opacity: 0; transform: scale(.9) rotate(-2deg); }
+    to { opacity: 1; transform: scale(1) rotate(-2deg); }
 }
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+button, .next {
+    display: inline-block; border: none; border-radius: 25px; padding: 12px 22px;
+    margin: 10px 5px; background: #ed8fbd; color: white; font-size: 16px;
+    font-weight: bold; cursor: pointer; text-decoration: none; box-shadow: 0 4px 12px #d88db955;
 }
-
-button, a {
-    display: inline-block;
-    border: none;
-    border-radius: 25px;
-    padding: 13px 22px;
-    margin: 10px;
-    background: #ed8fbd;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
+button:hover, .next:hover { background: #65cfc7; }
+.gallery {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+    max-width: 850px; padding: 15px; margin: 20px auto;
 }
-
-button:hover, a:hover {
-    background: #65cfc7;
-}
-
-#message {
-    display: none;
-    max-width: 550px;
-    padding: 20px;
-    margin: 20px auto;
-    background: #ffffffc9;
-    border-radius: 20px;
-    line-height: 1.8;
-}
-
-#balloons {
-    font-size: 28px;
+.polaroid { background: white; padding: 7px 7px 18px; box-shadow: 0 4px 12px #b87fa544; border-radius: 3px; animation: float 3s ease-in-out infinite; }
+.polaroid:nth-child(even) { transform: rotate(3deg); }
+.polaroid:nth-child(odd) { transform: rotate(-3deg); }
+.polaroid img { width: 100%; height: 120px; object-fit: cover; }
+.polaroid p { font-size: 12px; margin: 8px 0 0; }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+.cake { font-size: 95px; margin: 10px 0; animation: bounce 1.5s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+#message { display: none; max-width: 600px; margin: 20px auto; padding: 20px; background: #ffffffb8; border-radius: 20px; line-height: 1.8; animation: appear 1s ease; }
+#balloons { font-size: 28px; min-height: 40px; }
+footer { padding: 20px; }
+@media (max-width: 600px) {
+    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .polaroid img { height: 130px; }
+    .big-photo { height: 270px; }
 }
 </style>
 </head>
-
 <body>
-
-<h1>🎀 Happy Birthday! 🎀</h1>
-<p>Your special surprise is here! 🩷🩵</p>
-
-<div class="cake" id="cake">🎂</div>
-
-<button onclick="blowCandles()">Blow the Candles 🕯️</button>
-
-<div id="message">
-    <h2>🎉 Surprise! 🎉</h2>
-    <p>
-        Happy Birthday! 🩷<br>
-        I hope your day is full of happiness, love and beautiful memories.
-        Thank you for being part of my life.
-        we all love you so much! 🩵
-        sarasirrrrrrrr💗
-    </p>
-    <div id="balloons">🎈 🎈 🎈 🎈 🎈</div>
+<header>
+    <h1>🎀 Happy Birthday! 🎀</h1>
+    <p class="subtitle">Eight little memories, one very special person. 🩷</p>
+</header>
+<section>
+    <img id="slideshow" class="big-photo" src="Screenshot_20261028_100313_Gallery.jpg" alt="Our special memory">
+    <br>
+    <button onclick="previousPhoto()">← Previous</button>
+    <button onclick="nextPhoto()">Next Photo →</button>
+</section>
+<h2>Our Little Memory Album 🩵</h2>
+<div class="gallery">
+    <div class="polaroid"><img src="Screenshot_20261028_100313_Gallery.jpg" alt="Memory 1"><p>Memory #1 🩷</p></div>
+    <div class="polaroid"><img src="IMG-20261027-WA0001.jpg" alt="Memory 2"><p>Memory #2 🎀</p></div>
+    <div class="polaroid"><img src="Screenshot_20261028_100355_Gallery.jpg" alt="Memory 3"><p>Memory #3 ✨</p></div>
+    <div class="polaroid"><img src="IMG-20261029-WA0000.jpg" alt="Memory 4"><p>Memory #4 💗</p></div>
+    <div class="polaroid"><img src="IMG-20260915-WA0000.jpg" alt="Memory 5"><p>Memory #5 🦋</p></div>
+    <div class="polaroid"><img src="IMG-20261027-WA0003.jpg" alt="Memory 6"><p>Memory #6 🩵</p></div>
+    <div class="polaroid"><img src="motion_photo_4804788620746551717.jpg" alt="Memory 7"><p>Memory #7 🌷</p></div>
+    <div class="polaroid"><img src="IMG-20261027-WA0002.jpg" alt="Memory 8"><p>Memory #8 🎂</p></div>
 </div>
-
-<a href="page5-1.html">← Back to Our Memories 📸</a>
-<a href="index.html">← Back to the Beginning 🩷</a>
-<script>
-function blowCandles() {
-    document.getElementById("cake").textContent = "🍰";
-    document.getElementById("message").style.display = "block";
-    document.getElementById("balloons").textContent =
-        "🎈 💗 🎉 🎈 ✨ 🎈 🩵 🎉";
+<footer><a class="next" href="page7.html">open your birthday surprise!🎁</a></footer>
+<script>{
+let currentPhoto = 1;
+const totalPhotos = 8;
+function showPhoto() {
+    const photo = document.getElementById("slideshow");
+    photo.src=[
+        "Screenshot_20261028_100313_Gallery.jpg",
+        "IMG-20261027-WA0001.jpg",
+        "Screenshot_20261028_100355_Gallery.jpg",
+        "IMG-20261029-WA0000.jpg",
+        "IMG-20260915-WA0000.jpg",
+        "IMG-20261027-WA0003.jpg",
+        "motion_photo_4804788620746551717.jpg",
+        "IMG-20261027-WA0002.jpg"
+    ][currentPhoto - 1];
+    photo.onerror = function() {
+        photo.alt = "Please check photo" + currentPhoto + ".jpg in the images folder.";
+    };
+}
+function nextPhoto() {
+    currentPhoto++;
+    if (currentPhoto > totalPhotos) currentPhoto = 1;
+    showPhoto();
+}
+function previousPhoto() {
+    currentPhoto--;
+    if (currentPhoto < 1) currentPhoto = totalPhotos;
+    showPhoto();
 }
 </script>
-
 </body>
 </html>
