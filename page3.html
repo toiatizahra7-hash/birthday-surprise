@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video surprise🎬💗</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family:arial, sans-serif;
+            text-align:center;
+            background:linear-gradient(135deg,#ffe0ef,#d9ffff);
+            padding: 25px 12px;
+        }
+        .card{
+            background:white;
+            width:100%;
+            max-width:550px;
+            padding:30px 20px;
+            border-radius:25px;
+            box-shadow:0 8px 25px #d99dbb55;
+            animation:appear 1s ease;
+        }
+        h1{
+            color:#e879a9
+            font: size 30px;
+        }
+        p{
+            color:#666;
+            font-size:17px;
+            line-height:1.6;
+        }
+        video{
+            width:100%;
+            max-height:300px;
+            border-radius:15px;
+            background:#fce7f3;
+            margin-top:10px;
+        }
+        .next{
+            display:inline-block;
+            margin-top:25px;
+            padding:13px 35px;
+            background:#f48fbd;
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius: 30px;
+            transition:0.3s;
+        }
+        .next:hover{
+            background:#72d6d0;
+            transform:scale(1.05);
+        }
+        @keyframes appear{
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }       
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>A Little Surprise! 🎬💗</h1>
+        <p>i have a somthing special for you!✨<br>press play and enjoy this little video!💖</p>
+        <video controls>
+            <source src="2026-10-28-094927663 (1).mp4" type="video/mp4">
+            Your browser does not support the video.
+        </video>
+        <p>made with love, just for you!💖</p>
+        <a href="page4.html" class="next">Next♡</a>
+    </div>
+</body>
+</html>

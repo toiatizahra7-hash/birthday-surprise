@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cute pics of you! 📸💗 </title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            padding: 30px 15px;
+            font-family:arial, sans-serif;
+            text-align:center;
+            color:#895d73;
+            background:linear-gradient(135deg,#ffe4f0,#ddffff); 
+            overflow-x:hidden;
+        }
+        h1{
+            color:#e879a9;
+            font-size:30px;
+        }
+        .intro{
+            line-height:1.8;
+            margin-bottom:35px;
+                
+        }
+        .gallery{
+            max-width:950px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:repeat(3, minmax(0,1px, 1fr));
+            gap:22px;
+        }
+        photo{
+            position:relative;
+            min-width:0;
+            padding:9px 9px 24px;
+            background:white;
+            border-radius:8px;
+            box-shadow:0 5px 15px #bd83a355;
+            animation:float 3s ease-in-out infinite;
+            transition:0.3s;
+        }
+        .photo:nth-child(odd){
+            transform:rotate(-3deg);
+        }
+        .photo:nth-child(even){
+            transform:rotate(3deg);
+            animation-delay:0.7s;
+        }
+        .photo:hover{
+            transform:rotate(0deg) scale(1.04);
+            z-index:3;
+        }
+        .photo img{
+            display:block;
+            width:100%;
+            aspect-ratio:3/4;
+            object-fit:cover;
+            border-radius:5px;
+            background:#ffe4f0;
+        }
+        .caption{
+            margin-top:12px;
+            font-size:25px;
+            font-weight:bold;
+        }
+        .sticker{
+            position:absolute;
+            font-size:25px;
+            z-index:2;
+            filter:drop-shadow(0 2px 2px #00000015);
+        }
+        .top-right{
+            top:-17px;
+            right:-10px;
+        }
+        .top-left{
+            top:-14px;
+            left:-10px;
+        }
+         .bottom-left{
+            bottom:0px;
+            left:-13px;
+        }
+        .bottom-right{
+            bottom:0;
+            right:-12px;
+        }
+        .next{
+            display:inline-block;
+            margin:40px;
+            padding:13px 35px;
+            border-radius: 30px;
+            background:#f18dbb;
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            box-shadow:0 5px 15px #e9a3c355;
+            transition:0.3s;
+        }
+        .next:hover{
+            background:#65cfc8;
+            transform:scale(1.05);
+        }
+        @keyframes float{
+            0%,100%{
+                transform:0 0;
+            }
+
+            50%{
+                transform:0 -5px;
+            }
+        }
+        @media (max-width: 600px){
+            .gallery{
+                grid-template-columns:repeat(2, minmax(0,1fr));
+                gap:17px;
+            }
+        }
+        h1{
+            font-size:25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🩷her little memories🩷</h1>
+    <p class="intro">a little album made just for you!💖<br>every picture holds a special memory.🦋</p>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker top-right">💖</span>
+            <img src="IMG-20261028-WA0006.jpg" alt="memory 1">
+            <div class="caption">baby saoura🧸💕</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker bottom-left">💖</span>
+            <img src="IMG-20261028-WA0001.jpg" alt="memory 2">
+            <div class="caption">cutie💐</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker top-left">💖</span>
+            <img src="IMG-20261028-WA0000.jpg" alt="memory 3">
+            <div class="caption">she still have her cuitie cheeks🐰</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker bottom-right">💖</span>
+            <img src="IMG-20261028-WA0004.jpg" alt="memory 4">
+            <div class="caption">mahla zinha🎀</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker top-right">💖</span>
+            <img src="IMG-20261028-WA0008.jpg" alt="memory 5">
+            <div class="caption">summer vibes💛🐚</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker bottom-left">💖</span>
+            <img src="IMG-20261028-WA0009.jpg" alt="memory 6">
+            <div class="caption">hiking🌵🌞</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker top-left">💖</span>
+            <img src="IMG-20261028-WA0005.jpg" alt="memory 7">
+            <div class="caption">first days of school📓🩷</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker bottom-right">💖</span>
+            <img src="IMG-20261028-WA0002.jpg" alt="memory 8">
+            <div class="caption">baddie💅🏻</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker top-right">💖</span>
+            <img src="IMG-20261027-WA0000.jpg" alt="memory 9">
+            <div class="caption">dress🪞🦢</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker bottom-left">💖</span>
+            <img src="IMG-20261028-WA0010.jpg" alt="memory 10">
+            <div class="caption">el houli💐💋</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker top-left">💖</span>
+            <img src="IMG-20261028-WA0007.jpg" alt="memory 11">
+            <div class="caption">diva🫦</div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo">
+            <span class="sticker bottom-right">💖</span>
+            <img src="Screenshot_20261028_100318_Gallery.jpg" alt="memory 12">
+            <div class="caption">platinum iconic pink wall🩷🌸</div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+        <a class="next" href="page5-1.html">Next surprise🎉🩷</a>
+</body>
+</html>    

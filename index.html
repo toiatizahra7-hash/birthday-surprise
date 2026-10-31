@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Secret 🎀</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe1ef, #d8fffb);
+    color: #874d70;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 300px;
+    box-shadow: 0 8px 25px #d88db955;
+}
+
+input, button {
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ed9fc5;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+button {
+    background: #ed8fbd;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#message {
+    color: #dc579b;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+    <h1>🎀 A Little Secret 🎀</h1>
+    <p>Someone has a special surprise for you! 🩷</p>
+    <p>Enter your birthday code 💌</p>
+
+    <input id="secretCode" type="password"
+           placeholder="Secret code" maxlength="4">
+
+    <br>
+
+    <button onclick="unlock()">Unlock My Surprise 💗</button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function unlock() {
+    const code = document.getElementById("secretCode").value;
+
+    if (code === "2802") {
+        window.location.href ="home.html";
+    } else {
+        document.getElementById("message").textContent =
+            "Oops! Try again 💕";
+    }
+}
+</script>
+</body>
+</html>
